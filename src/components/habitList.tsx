@@ -1,4 +1,4 @@
-import { Box, Typography, IconButton, Card, CardContent, CardActions, Chip, Grid } from "@mui/material";
+import { Box, Typography, IconButton, Card, CardContent, CardActions, Chip } from "@mui/material";
 import { Delete as DeleteIcon } from "@mui/icons-material";
 import useHabitStore from "../store/store";
 
