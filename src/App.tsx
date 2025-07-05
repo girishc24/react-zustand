@@ -1,24 +1,28 @@
-import { useState } from 'react'
+import { Container, Box, Typography } from '@mui/material';
 import './App.css'
+import useHabitStore from './store/store'
+import AddHabitForm from './components/addHabitForm';
+import HabitList from './components/habitList';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const store = useHabitStore()
+  console.log(store);
+  
   return (
     <>
-     
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Container>
+      <Box>
+        <Typography variant="h2" component="h1" gutterBottom align='center'>
+            Habit tracker
+            {/* Add Form
+            List
+            stats */}
+
+            <AddHabitForm />
+            <HabitList/>
+        </Typography>
+      </Box>
+    </Container>
     </>
   )
 }
